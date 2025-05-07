@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курс по Unreal Engine 5</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" 
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/kar.css">
+</head>
+<body>
+    <div class="dark">
+        <header>
+            <div class="container">
+                <div class="header">
+                    <a class="header_logo">
+                        <img src="image/game2.png" width="65" height="65" alt="Лого">
+                    </a>
+                    <div class="header_nav">
+                        <nav class="nav">
+                            <a href="C:\DiskD\project\frontend\index.html" class="nav_link">Главная страница</a>
+                            <a href="C:\DiskD\project\frontend\courses.html" class="nav_link">Курсы</a>
+                            <a href="C:\DiskD\project\frontend\price.html" class="nav_link">Проекты</a>
+                            <a href="C:\DiskD\project\frontend\infOfCompany.html" class="nav_link">О компании</a>                        
+                            <a href="#" class="btn btn-light" id="open_pop_up">Вход</a>    
+                            <div class="pop_up" id="pop_up"> 
+                                <div class="pop_up_container"> 
+                                    <div class="pop_up_body" id="pop_up_body"> 
+                                        <h2>Регистрация</h2> 
+                                        <div id="registrationForm"> 
+                                            <label for="firstName">Имя:</label> 
+                                            <input type="text" id="firstName" name="firstName" required> 
+                                            <label for="password">Пароль:</label> 
+                                            <input type="password" id="password" name="password" required> 
+                                            <label for="confirmPassword">Подтверждение пароля:</label> 
+                                            <input type="password" id="confirmPassword" name="confirmPassword" required> 
+                                            <button onclick="registerUser()">Создать аккаунт</button> 
+                                        </div> 
+                                        <div class="pop_up_close" id="pop_up_close">&#10006;</div> 
+                                    </div> 
+                                </div>
+                            </div>              
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="small-container">
+            <h2 class="title">Наши преподаватели</h2>            
+            <div class="row">
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                      <div class="card">
+                        <img src="image/mirac.avif" alt="mirac" style="width:100%">
+                        <h1>Мирослав</h1>
+                        <p>Работает в UE5 с самых первых версий, а так же в разработкой игр 
+                            на Unreal Engine 5.</p>
+                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                        <p><button>Связаться</button></p>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>    
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <div class="card">
+                        <img src="image/daniil.avif" alt="daniil" style="width:100%">
+                        <h1>Даниил</h1>
+                        <p>Unreal Engine Producer в Space Games
+                            8+ лет опыта коммерческой разработки.</p>
+                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                        <p><button>Связаться</button></p>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <div class="card">
+                        <img src="image/vladimir.avif" alt="vladimir" style="width:100%">
+                        <h1>Владимир</h1>
+                        <p>Unreal Engine Producer в CM Games
+                            4+ лет опыта коммерческой разработки.</p>
+                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                        <p><button>Связаться</button></p>
+                    </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                    
+                   </div>
+                    <br>
+                    
+                    <div style="text-align:center">
+                      <span class="dot" onclick="currentSlide(1)"></span> 
+                      <span class="dot" onclick="currentSlide(2)"></span> 
+                      <span class="dot" onclick="currentSlide(3)"></span> 
+                    </div>                      
+            </div>
+            <script src="teacher.js"></script>
+        </div>
+    </div>
+    <section class="dark consultation white-section">
+        <div class="container">
+            <div class="hidden-element">
+                <h3 class="title-h3 consultation_title">Посмотреть наши проекты</h3>
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd74daTZGv7AFUOWW8aL1nQtKks-56JMhbtytHWRG5Z9YyIDw/viewform?usp=sf_link" class="btn btn-accent consultation_btn">Проекты</a>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <a href="#">Условия и конфиденциальность</a>
+                <a href="#">Оферта</a>
+                <p>Space Game 2024</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

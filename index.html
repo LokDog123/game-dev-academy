@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курс по Unreal Engine 5</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" 
+    rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/normalize.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="dark">
+        <header>
+            <div class="container">
+                <div class="header">
+                    <a class="header_logo">
+                        <img src="image/game2.png" width="65" height="65" alt="Лого">
+                    </a>
+                    <div class="header_nav">
+                        <nav class="nav">
+                            <a href="C:\DiskD\project\frontend\courses.html" class="nav_link">Курсы</a>
+                            <a href="C:\DiskD\project\frontend\price.html" class="nav_link">Проекты</a>
+                            <a href="C:\DiskD\project\frontend\infOfCompany.html" class="nav_link">О компании</a>                        
+                            <a href="C:\DiskD\project\frontend\teacher.html" class="nav_link">Преподаватели</a>                        
+                            <a href="#" class="btn btn-light" id="open_pop_up">Вход</a>    
+                            <div class="pop_up" id="pop_up"> 
+                                <div class="pop_up_container"> 
+                                    <div class="pop_up_body" id="pop_up_body"> 
+                                        <h2>Регистрация</h2> 
+                                        <div id="registrationForm"> 
+                                            <label for="firstName">Имя:</label> 
+                                            <input type="text" id="firstName" name="firstName" required> 
+                                            <label for="password">Пароль:</label> 
+                                            <input type="password" id="password" name="password" required> 
+                                            <label for="confirmPassword">Подтверждение пароля:</label> 
+                                            <input type="password" id="confirmPassword" name="confirmPassword" required> 
+                                            <button onclick="registerUser()">Создать аккаунт</button> 
+                                        </div> 
+                                        <div class="pop_up_close" id="pop_up_close">&#10006;</div> 
+                                    </div> 
+                                </div>
+                            </div>         
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="main">
+                    <div class="main_text">
+                        <h1 class="title-h1 main_title">Unreal Engine 5 : создание игр</h1>
+                        <p class="text main_desc">В течении 12 недель создашь 5 игровых поектов<br> разных жанров и сможешь монетизировать 
+                            каждый их их.</p>
+                        <a href="C:\DiskD\project\frontend\courses.html" class="btn btn-accent">Попробывать бесплатно</a>
+                    </div>
+                    <div class="main_cover gallery">
+                        <img src="image/course.svg.png" width="600" height="600" alt="">
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <section class="page">
+        <div class="container _line">
+            <div class="free">
+                <div class="free_text">
+                    <div class="hidden-element">
+                        <h2 class="title-h2 free_title">Начни учиться бесплатно</h2>
+                        <p class="text free_desc">Сколько ещё будете откладывать обучение на потом?
+                         Прямо сейчас 10 уроков ждут тебя в открытом доступе.</p>
+                    </div>
+                    <a href="C:\DiskD\project\frontend\courses.html" class="btn btn-accent free_btn">Попробывать бесплатно</a>
+                </div>
+                <div class="free_cover gallery">
+                    <img src="image/free.png" width="600" height="600" alt="">
+                </div>
+            </div>
+        </div>
+    </section>    
+    <section class="dark consultation">
+        <div class="container">
+            <div class="hidden-element">
+                <h3 class="title-h3 consultation_title">Вы можете оценить наши курсы?</h3>
+            </div>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSd74daTZGv7AFUOWW8aL1nQtKks-56JMhbtytHWRG5Z9YyIDw/viewform?usp=sf_link" class="btn btn-accent consultation_btn">Оценить курсы</a>
+        </div>
+    </section>
+    <div class = "chat-bot"> 
+        <h2>BotHelp</h2> 
+        <p>онлайн</p> 
+        <div id="messages"></div> 
+        <input type="text" id="messageInput" placeholder="Введите ваше сообщение..."> 
+        <button id="sendButton">Отправить</button> 
+    </div>
+    <script> 
+        const socket = new WebSocket('ws://localhost:3030'); 
+     
+        socket.onopen = function() { 
+            console.log('Соединение установлено'); 
+        }; 
+     
+        socket.onmessage = function(event) { 
+            const messagesDiv = document.getElementById('messages'); 
+            messagesDiv.innerHTML += '<div>' + event.data + '</div>'; 
+            messagesDiv.scrollTop = messagesDiv.scrollHeight; 
+        }; 
+     
+        socket.onclose = function(event) { 
+            console.log('Соединение закрыто. Код:', event.code); 
+        }; 
+     
+        document.getElementById('sendButton').onclick = function() { 
+            const messageInput = document.getElementById('messageInput'); 
+            const message = messageInput.value; 
+     
+            if (socket.readyState === WebSocket.OPEN) { 
+                socket.send(message); 
+                messageInput.value = '';  
+            } else { 
+                console.log('Соединение не установлено. Попробуйте позже.'); 
+            } 
+        }; 
+    </script>
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <a href="#">Условия и конфиденциальность</a>
+                <a href="#">Оферта</a>
+                <p>Space Game 2024</p>
+            </div>
+        </div>
+    </footer>
+
+    
+           
+    
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+    <script src="registracia.js"></script>
+</body>
+</html>

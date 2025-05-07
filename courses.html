@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" 
+    rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/normalize.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+</head>
+<body>
+    <div class="dark">
+        <header>
+            <div class="container">
+                <div class="header">
+                    <a class="header_logo">
+                        <img src="image/game2.png" width="65" height="65" alt="Лого">
+                    </a>
+                    <div class="header_nav">
+                        <nav class="nav">
+                            <a href="C:\DiskD\project\frontend\index.html" class="nav_link">Главная страница</a>
+                            <a href="C:\DiskD\project\frontend\price.html" class="nav_link">Проекты</a>
+                            <a href="C:\DiskD\project\frontend\infOfCompany.html" class="nav_link">О компании</a>                        
+                            <a href="C:\DiskD\project\frontend\teacher.html" class="nav_link">Преподаватели</a>                   
+                            <a href="#" class="btn btn-light" id="open_pop_up">Вход</a>    
+                            <div class="pop_up" id="pop_up"> 
+                                <div class="pop_up_container"> 
+                                    <div class="pop_up_body" id="pop_up_body"> 
+                                        <h2>Регистрация</h2> 
+                                        <div id="registrationForm"> 
+                                            <label for="firstName">Имя:</label> 
+                                            <input type="text" id="firstName" name="firstName" required> 
+                                            <label for="password">Пароль:</label> 
+                                            <input type="password" id="password" name="password" required> 
+                                            <label for="confirmPassword">Подтверждение пароля:</label> 
+                                            <input type="password" id="confirmPassword" name="confirmPassword" required> 
+                                            <button onclick="registerUser()">Создать аккаунт</button> 
+                                        </div> 
+                                        <div class="pop_up_close" id="pop_up_close">&#10006;</div> 
+                                    </div> 
+                                </div>
+                            </div>              
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="small-container">
+                <h2 class="title">Наши Курсы</h2>
+                <div class="row">
+                    <div class="cardOfCourse">
+                            <img src="image/UE5.4.jpg" alt="Denim Jeans" style="width:100%">
+                            <h1>Курс для новичка в Unreal Engine 5</h1>
+                            <p class="price">$00.00</p>
+                            <p>Курс с обучением разработке игр на Unreal Engine 5 для начаинающего разработчика — отличный шанс на вкатывание 
+                                в профессию геймдизайнера. Здесь ты реализуешь свои первые проекты в новом статусе: платформер,
+                                 игрушку-раннер. Начените изучать этот курс прямо сейчас !</p>
+                            <p><button>Выбрать курс</button></p>
+                    </div>
+                    <div class="cardOfCourse">
+                            <img src="image/UE5.4.jpg" alt="Denim Jeans" style="width:100%">
+                            <h1>Базовый курс по Unreal Engine 5</h1>
+                            <p class="price">$35.00</p>
+                            <p>Курсы с обучением разработке игр на Unreal Engine 5 — отличный шанс на вкатывание 
+                                в профессию геймдизайнера. Здесь ты реализуешь свои первые проекты в новом статусе: платформер а-ля «Марио»,
+                                 игрушку-раннер формата «Соника», сетевой шутер на уровне CS:GO и лутер-шутер вроде Warframe и Destiny.</p>
+                            <p><button>Выбрать курс</button></p>
+                    </div>
+                    <div class="cardOfCourse">
+                            <img src="image/UE5.4.jpg" alt="Denim Jeans" style="width:100%">
+                            <h1>Продвинутый курс по UE 5</h1>
+                            <p class="price">$60.00</p>
+                            <p>Научитесь создавать видеоигры с помощью этого курса по Unreal Engine 5 для разработчиков игр среднего уровня.
+                                Продолжите свое обучение в области разработки игр с одним из самых актуальных курсов по UE5. 
+                                Этот курс регулярно обновляется, так что он всегда будет охватывать одну из самых последних версий UE5.</p>
+                            <p><button>Выбрать курс</button></p>
+                    </div>
+                    <div class="cardOfCourse">
+                            <img src="image/AnalyticData2.avif" alt="Denim Jeans" style="width:100%">
+                            <h1>Курс по аналитике  данных</h1>
+                            <p class="price">$25.99</p>
+                            <p>Вы узнаете, какие бывают аналитики и чем они занимаются, к чему готовиться и на какую зарплату рассчитывать. 
+                                Так вам будет легче выбрать направление по душе.</p>
+                            <p><button>Выбрать курс</button></p>
+                    </div>
+                    <div class="cardOfCourse">
+                        <img src="image/game2.png" alt="Denim Jeans" style="width:100%">
+                        <h1>Курс по геймдизайну</h1>
+                        <p class="price">$35.00</p>
+                        <p>
+                            Вы с нуля освоите принципы гейм дизайна и научитесь работать с популярными движками и UE5. 
+                            Узнаете, как удерживать интерес игроков и монетизировать игры.</p>
+                        <p><button>Выбрать курс</button></p>
+                    </div>
+                </div>
+            </div>           
+        </main>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <a href="#">Условия и конфиденциальность</a>
+                <a href="#">Оферта</a>
+                <p>Space Game 2024</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курс по Unreal Engine 5</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" 
+    rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/normalize.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="dark">
+        <header>
+            <div class="container">
+                <div class="header">
+                    <a class="header_logo">
+                        <img src="image/game2.png" width="65" height="65" alt="Лого">
+                    </a>
+                    <div class="header_nav">
+                        <nav class="nav">
+                            <a href="C:\Диск D\projects\frontend\index.html" class="nav_link">Главная страница</a>
+                            <a href="C:\Диск D\projects\frontend\price.html" class="nav_link">Цены</a>
+                            <a href="C:\Диск D\projects\frontend\infOfCompany.html" class="nav_link">О компании</a>                        
+                            <a href="C:\Диск D\projects\frontend\teacher.html" class="nav_link">Преподаватели</a>                   
+                            <a href="#" class="btn btn-light _ml">Вход</a>                        
+                            <a href="#" class="btn btn-accent">Попробывать бесплатно</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="small-container">
+                <div class="main">
+                    <div class="main_text">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="image/UN5Start2.png" width="150px" alt="">
+                                <h4>Курс для новичка в Unreal Engine 5</h4>
+                                <div class="rating">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                                <p class="text main_desc">Курс с обучением разработке игр на Unreal Engine 5 для начаинающего разработчика — отличный шанс на вкатывание 
+                                    в профессию геймдизайнера. Здесь ты реализуешь свои первые проекты в новом статусе: платформер,
+                                     игрушку-раннер.</p>
+                                <a href="#" class="btn btn-accent">Выбрать</a>
+                            </div>
+                            <div class="col-4">
+                                <img src="image/UE5.4.jpg" width="200px" alt="">
+                                <h4>Базовый курс по Unreal Engine 5</h4>
+                                <div class="rating">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                                <p class="text main_desc">Курсы с обучением разработке игр на Unreal Engine 5 — отличный шанс на вкатывание 
+                                    в профессию геймдизайнера. Здесь ты реализуешь свои первые проекты в новом статусе: платформер а-ля «Марио»,
+                                     игрушку-раннер формата «Соника», сетевой шутер на уровне CS:GO и лутер-шутер вроде Warframe и Destiny.</p>
+                                <a href="#" class="btn btn-accent">Выбрать</a>
+                            </div>
+                            <div class="col-4">
+                                <img src="image/unreal-engine-5-prodvinutyy-kurs.webp" width="200px" alt="">
+                                <h4>Продвинутый курс по UE5</h4>
+                                <div class="rating">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                </div>
+                                <p class="text main_desc">Научитесь создавать видеоигры с помощью этого курса по Unreal Engine 5 для разработчиков игр среднего уровня.
+                                    Продолжите свое обучение в области разработки игр с одним из самых актуальных курсов по Unreal Engine. 
+                                    Этот курс регулярно обновляется, так что он всегда будет охватывать одну из самых последних версий Unreal Engine 5.</p>
+                                <a href="#" class="btn btn-accent">Выбрать</a>
+                            </div>
+                            <div class="col-4">
+                                <img src="image/AnalyticData2.avif" width="200px" alt="">
+                                <h4>Курсы по аналитике данных</h4>
+                                <div class="rating">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                </div>
+                                <p class="text main_desc">Вы узнаете, какие бывают аналитики и чем они занимаются, к чему готовиться и на какую зарплату рассчитывать. 
+                                    Так вам будет легче выбрать направление по душе.</p>
+                                <a href="#" class="btn btn-accent">Выбрать</a>
+                            </div>
+                            <div class="col-4">
+                                <img src="image/game2.png" width="200px" alt="">
+                                <h4>Курс по геймдизайну</h4>
+                                <div class="rating">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                </div>
+                                <p class="text main_desc">Геймдизайнер создаёт структуру игры. Он продумывает идею, правила, игровой процесс и решает, 
+                                    какие эмоции вызовет сюжет у игроков.
+                                    Вы с нуля освоите принципы гейм дизайна и научитесь работать с популярными движками и Unreal Engine. 
+                                    Узнаете, как удерживать интерес игроков и монетизировать игры. А мы поможем вам начать карьеру в игровой индустрии.</p>
+                                <a href="#" class="btn btn-accent">Выбрать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <a href="#">Условия и конфиденциальность</a>
+                <a href="#">Оферта</a>
+                <p>Space Game 2024</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>-->

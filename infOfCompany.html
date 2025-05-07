@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курс по Unreal Engine 5</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" 
+    rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+</head>
+<body>
+    <div class="dark">
+        <header>
+            <div class="container">
+                <div class="header">
+                    <a class="header_logo">
+                        <img src="image/game2.png" width="65" height="65" alt="Лого">
+                    </a>
+                    <div class="header_nav">
+                        <nav class="nav">
+                            <a href="C:\DiskD\project\frontend\index.html" class="nav_link">Главная страница</a>
+                            <a href="C:\DiskD\project\frontend\courses.html" class="nav_link">Курсы</a>
+                            <a href="C:\DiskD\project\frontend\price.html" class="nav_link">Проекты</a>                       
+                            <a href="C:\DiskD\project\frontend\teacher.html" class="nav_link">Преподаватели</a>                   
+                            <a href="#" class="btn btn-light" id="open_pop_up">Вход</a>    
+                            <div class="pop_up" id="pop_up"> 
+                                <div class="pop_up_container"> 
+                                    <div class="pop_up_body" id="pop_up_body"> 
+                                        <h2>Регистрация</h2> 
+                                        <div id="registrationForm"> 
+                                            <label for="firstName">Имя:</label> 
+                                            <input type="text" id="firstName" name="firstName" required> 
+                                            <label for="password">Пароль:</label> 
+                                            <input type="password" id="password" name="password" required> 
+                                            <label for="confirmPassword">Подтверждение пароля:</label> 
+                                            <input type="password" id="confirmPassword" name="confirmPassword" required> 
+                                            <button onclick="registerUser()">Создать аккаунт</button> 
+                                        </div> 
+                                        <div class="pop_up_close" id="pop_up_close">&#10006;</div> 
+                                    </div> 
+                                </div>
+                            </div>              
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="main">
+                <div class="main_text">
+                    <h1 class="title-h2 price_titleGl">О компании</h1>
+                    <p class="text main_desc">Создателем компании, специализирующейся на разработке игр на Unreal Engine 5, Толкач Мирослав.
+                         Мирослав основал свою компанию, Space Games,
+                        в 2022 году с целью создания инновационных и захватывающих игр, используя передовые технологии.</p>
+                </div>
+                <div class="main_cover"><!--сделать так чтобы картинки менялились раз в 3-5 секунд(примерно)-->
+                    <img src="image/SpaceGameStudio2.jpg" width="600" height="450" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<div class="container">
+        <div class="free">
+            <div class="free_text">
+                <h2 class="title-h2 price_title">Наши ценности</h2>
+            </div>
+        </div>
+        <div class="perk-content">
+            <div class="perk-img perks-red">
+                <img src="/build/images/who_we_are/values/icon-1-3925765d.svg ">
+                <h4>Будьте амбициозны</h4>
+            </div>
+        </div>
+    </div>-->
+    <div class="container">
+        <div class="hidden-element">
+            <h2 class="title-h2 price_title">Наши ценности</h2>
+            <div class="danger">
+                <p><strong>Будьте амбициозны!</strong></p>
+            </div>
+            <div class="danger">
+                <p><strong>Поставьте себе цель и упорствуйте!</strong></p>
+            </div>
+            <div class="danger">
+                <p><strong>Будьте честны со всеми и всегда!</strong></p>
+            </div>
+            <div class="danger">
+                <p><strong>Будьте добры и уважительны ко всем окружающим!</strong></p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="main">
+            <div class="main_text">
+                <div class="btn-up btn-up_hide"></div>
+                <div class="hidden-element">
+                    <h2 class="title-h2 price_title">Наши офисы по всему миру</h2>
+                    <p class="text">Современные офисные помещения с первоклассным оборудованием, выделенной парковкой и столовыми 
+                        с разнообразным меню на выбор каждый день. А если вам нравятся дополнительные мероприятия, мы предлагаем специально 
+                        спроектированную крышу с баскетбольной площадкой, пространством для отдыха, встреч или работы на открытом воздухе, 
+                        а также круглосуточный доступ к нашему спортзалу на территории.</p>
+                </div>
+                <h2>Список стран</h2> 
+                <ul id="country-list" class="country-list"></ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <a href="#">Условия и конфиденциальность</a>
+                <a href="#">Оферта</a>
+                <p>Space Game 2024</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="apiNapolnenie.JS"></script>
+</body>
+</html>
